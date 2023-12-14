@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="../js/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<h2>在data中声明的变量、函数</h2>
+		<h3>变量: {{msg}}</h3>
+		<h3>函数: {{sayHello()}}</h3>
+
+		<hr>
+		<h3>{{100}}</h3>
+		<h3>{{'hello'}}</h3>
+		<h3>{{'你好'}}</h3>
+		<h3>{{3.14}}</h3>
+
+		<hr>
+		<h2>javascript表达式</h2>
+		<h3>{{1 + 1}}</h3>
+		<h3>{{'hello' + 'vue'}}</h3>
+		<h3>{{msg + 1}}</h3>
+		<h3>{{'msg' + 1}}</h3>
+		<h3>{{gender ? '男' : '女'}}</h3>
+		<h3>{{number + 1}}</h3>
+		<h3>{{'number' + 1}}</h3>
+		<h3>{{msg.split('').reverse().join('')}}</h3>
+
+		<hr>
+		<h2>在白名单里面的Vue的全局变量</h2>
+		<h3>{{Date}}</h3>
+		<h3>{{Date.now()}}</h3>
+		<h3>{{Math}}</h3>
+		<h3>{{Math.ceil(3.001)}}</h3>
+
+	</div>
+
+
+	<script>
+
+		new Vue({
+			data : {
+				gender : true,
+				number : 100,
+				msg : "abcdmsg",
+				sayHello : function() {
+					console.log("Hello Vue");
+				}
+			},
+
+			el : "#app",
+		})
+
+	</script>
+
+</body>
+</html>

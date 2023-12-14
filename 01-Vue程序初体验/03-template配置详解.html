@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>template配置详解</title>
+	<script src="../js/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		nihao
+		<p>我乃{{local}}赵{{subname}}也</p>
+	</div>
+
+
+	<script>
+
+		new Vue({
+			data : {
+				name : "haha",
+				subname : "hehe",
+				local : "123"
+				// name : "a赵云",
+				// subname : "a子龙",
+				// local : "a常山",
+				// age : 20
+			},
+			el : "#app"
+		})
+
+	</script>
+
+
+</body>
+</html>

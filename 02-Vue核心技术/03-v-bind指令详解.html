@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="../js/vue.js"></script>
+</head>
+<body>
+
+	<div id="app">
+		<img src="../基础部分/img/1.jpg"><br>
+		<img v-bind:src="imgPath"><br>
+		<!-- 简写形式 -->
+		<img :src="imgPath"><br>
+
+		<input type="text" name="v1" value="345"><br>
+		<input type="text" name="v2" :value="value"><br>
+
+		<a href="https://hahajiukanjian.github.io">网址2</a>
+		<a :href="website">网址1</a>
+
+	</div>
+
+	<script>
+
+		new Vue({
+			el : "#app",
+			data : {
+				imgPath : "../基础部分/img/1.jpg",
+				value : "123",
+				website : "https://hahajiukanjian.github.io",
+			}
+		})
+
+	</script>
+
+</body>
+</html>

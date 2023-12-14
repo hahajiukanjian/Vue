@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+
+	<script>
+
+	let clazz = {}
+
+	let name = "哈哈就看见"
+
+	Object.defineProperty(clazz, "clazzname", {
+		// value : "nihao",
+		// writable : false,
+		get: function () {
+			console.log("get方法执行了")
+			return name
+		},
+
+		set: function (temp) {
+			console.log("set方法执行了");
+			name = temp
+			// return tempName
+		}
+	})
+
+	</script>
+
+</body>
+</html>
