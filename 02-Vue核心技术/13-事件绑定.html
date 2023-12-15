@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="../js/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<h1>{{msg}}</h1>
+		<button onclick="alert('hi')">JS原生点击事件</button>
+		<button v-on:click="sayhi">Vue点击事件</button>
+	</div>
+
+	<script>
+		// function sayhi() {
+		// 	alert('js hi')
+		// }
+
+		const vm = new Vue({
+			el : '#app',
+			data : {
+				msg : "事件绑定，点击按钮弹出窗口",
+				hi : "hi",
+			},
+			methods : {
+				sayhi : function() {
+					alert('hi');
+				}
+			}
+		})
+	</script>
+
+</body>
+</html>

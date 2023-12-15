@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-    <!-- 
+    <!--
         Vue当中提供的事件修饰符：
         .stop ： 停止事件冒泡，等同于 event.stopPropagation()。
         .prevent ： 等同于 event.preventDefault() 阻止事件的默认行为。
@@ -35,7 +35,7 @@
                     .passive 和 .prevent 修饰符是对立的。不可以共存。（如果一起用，就会报错。）
                     .prevent：阻止事件的默认行为。
                     .passive：解除阻止。
-     -->        
+     -->
     <!-- 容器 -->
     <div id="app">
         <h1>{{msg}}</h1>
@@ -59,7 +59,7 @@
                 <button @click="yi">添加事件监听器的时候采用事件捕获模式</button>
             </div>
         </div>
-        
+
         <br>
         <br>
         <!-- .self修饰符 -->

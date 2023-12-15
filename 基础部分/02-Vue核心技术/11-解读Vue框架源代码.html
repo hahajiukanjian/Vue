@@ -9,7 +9,7 @@
     <script src="../js/vue.js"></script>
 </head>
 <body>
-    <!-- 
+    <!--
         Vue框架源代码中关键性代码：
         1. var data = vm.$options.data;
             注意：这是获取data。程序执行到这里的时候vm上还没有 _data 属性。
@@ -30,7 +30,7 @@
                                         }
                 vm._data 这个属性直接指向了底层真实的data对象。通过_data访问的name和age是不会走数据代理机制的。
                 通过vm._data方式获取name和age的时候，是不会走getter和setter方法的。
-            
+
             注意：对于Vue实例vm来说，不仅有_data这个属性，还有一个$data这个属性。
                    _data 是框架内部使用的，可以看做私有的。
                    $data 这是Vue框架对外公开的一个属性，是给我们程序员使用。
@@ -56,7 +56,7 @@
                 Object.defineProperty(vm, 'age', sharedPropertyDefinition);
             }
      -->
-     
+
     <!-- 容器 -->
     <div id="app">
         <h1>姓名：{{name}}</h1>
@@ -83,7 +83,7 @@
         // 建议使用$data这个属性。
         console.log('name = ' + vm.$data.name)
         console.log('age = ' + vm.$data.age)
-        
+
     </script>
 </body>
 </html>
