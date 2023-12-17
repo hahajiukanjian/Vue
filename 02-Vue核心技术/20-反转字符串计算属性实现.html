@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="../js/vue.js"></script>
+</head>
+<body>
+
+	<div id="app">
+		<h1>计算属性控制反转字符串</h1>
+		正序：<input type="text" v-model="info"><br>
+		反转：{{infoReverse}} <br>
+		反转：{{infoReverse}} <br>
+		反转：{{infoReverse}} <br>
+		反转：{{infoReverse}} <br>
+		反转：{{infoReverse}} <br>
+		反转：{{infoReverse}} <br>
+		'hehe'+正序：{{hehe}} <br>
+		'hehe'+正序：{{hehe}} <br>
+		'hehe'+正序：{{hehe}} <br>
+		'hehe'+正序：{{hehe}} <br>
+		'hehe'+正序：{{hehe}} <br>
+		'hehe'+正序：{{hehe}} <br>
+		'hehe'+正序：{{hehe}} <br>
+		'hehe'+正序：{{hehe}} <br>
+		'hehe'+正序：{{hehe}} <br>
+	</div>
+
+	<script>
+		const vm = new Vue({
+			el : '#app',
+			data : {
+				info : ''
+			},
+			computed : {
+				hehe : {
+					get() {
+						console.log('get runned');
+						return 'hehe' + this.info;
+					},
+					set() {
+						console.log('set runned');
+					}
+				},
+				infoReverse() {
+					return this.info.split('').reverse().join('')
+				}
+			}
+		})
+	</script>
+
+</body>
+</html>

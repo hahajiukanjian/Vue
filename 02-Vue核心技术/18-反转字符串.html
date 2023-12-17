@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="../js/vue.js"></script>
+</head>
+<body>
+
+	<div id="app">
+		<!--
+			1. 难以阅读
+			2. 代码没有复用
+			3. 不方便维护
+		 -->
+		<h1>反转字符串</h1>
+		正序字符串：<input type="text" v-model="str"><br>
+		反转字符串：{{str.split('').reverse().join('')}}<br>
+		反转字符串：{{str.split('').reverse().join('')}}<br>
+		反转字符串：{{str.split('').reverse().join('')}}<br>
+		反转字符串：{{str.split('').reverse().join('')}}<br>
+		反转字符串：{{str.split('').reverse().join('')}}<br>
+		反转字符串：{{str.split('').reverse().join('')}}<br>
+	</div>
+
+	<script>
+		const vm = new Vue({
+			el : '#app',
+			data : {
+				str : ''
+			},
+			methods : {
+
+			}
+		})
+	</script>
+
+</body>
+</html>

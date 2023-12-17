@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="../js/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		回车键（原始函数判断）：<input type="text" @keyup="printValue1"><br>
+		回车键（描述符）：<input type="text" @keyup.enter="printValue"><br>
+		回车键（键值）：<input type="text" @keyup.13="printValue"><br>
+		ctrl（keydown）：<input type="text" @keydown.ctrl="printValue"><br>
+		ctrl（keyup）：<input type="text" @keyup.ctrl="printValue"><br>
+		ctrl（+i）：<input type="text" @keyup.ctrl.i="printValue"><br>
+	</div>
+
+	<script>
+		const vm = new Vue({
+			el : '#app',
+			data : {
+			},
+			methods : {
+				printValue(event) {
+					console.log(event.target.value);
+				},
+				printValue1(event) {
+					if (event.keyCode === 13) {
+						console.log(event.target.value);
+					}
+				}
+			}
+		})
+	</script>
+</body>
+</html>

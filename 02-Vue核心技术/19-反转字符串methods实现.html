@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="../js/vue.js"></script>
+</head>
+<body>
+
+	<div id="app">
+        <h1>{{msg}}</h1>
+        输入的信息：<input type="text" v-model="info"> <br>
+        反转的信息：{{strResverse()}} <br>
+        反转的信息：{{strResverse()}} <br>
+        反转的信息：{{strResverse()}} <br>
+        反转的信息：{{strResverse()}} <br>
+        反转的信息：{{strResverse()}} <br>
+        反转的信息：{{strResverse()}} <br>
+	</div>
+
+	<script>
+		const vm = new Vue({
+			el : '#app',
+			data : {
+				msg : '计算属性-反转字符串案例',
+				info : ''
+			},
+			methods : {
+				strResverse() {
+					console.log('@');
+					return this.info.split('').reverse().join('')
+				}
+			}
+		})
+	</script>
+
+</body>
+</html>

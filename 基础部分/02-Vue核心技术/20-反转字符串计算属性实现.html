@@ -8,7 +8,7 @@
     <script src="../js/vue.js"></script>
 </head>
 <body>
-    <!-- 
+    <!--
         计算属性：
         1. 什么是计算属性？
             使用Vue的原有属性，经过一系列的运算/计算，最终得到了一个全新的属性，叫做计算属性。
@@ -92,7 +92,7 @@
                     }
                 },
                 // 完整写法
-                /* reversedInfo : { 
+                /* reversedInfo : {
                     get(){
                         return this.info.split('').reverse().join('')
                     },
@@ -109,7 +109,7 @@
                 } */
 
                 // 简写形式：set不需要的时候。
-                reversedInfo(){ 
+                reversedInfo(){
                     return this.info.split('').reverse().join('')
                 }
             }
